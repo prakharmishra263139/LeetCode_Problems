@@ -1,4 +1,4 @@
-/**
+/**https://assets.leetcode.com/users/default_avatar.jpg
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
