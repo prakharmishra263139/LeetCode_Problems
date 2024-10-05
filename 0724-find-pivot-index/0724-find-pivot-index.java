@@ -3,8 +3,8 @@ class Solution {
         int sum = 0;
         int leftsum=0;
 
-        for(int n:nums){
-            sum+=n;
+        for(int number:nums){
+            sum = sum+number;
         }
 
         for(int i=0;i<nums.length;i++){
@@ -12,7 +12,7 @@ class Solution {
                 return i;
             }
 
-            leftsum += nums[i];
+            leftsum  = leftsum+ nums[i];
         }
 
         return -1;
