@@ -1,21 +1,18 @@
 class Solution {
     public int numIdenticalPairs(int[] nums) {
-
-        int n = nums.length;
-        int goodCount=0;
-
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                if(nums[i]==nums[j]){
-                    goodCount++;
-                }
-
-            }
+    HashMap<Integer,Integer>answer=new HashMap<>();
+   
+    int result =0;
+        for(int num :nums){
+              if(answer.containsKey(num)){
+                int k = answer.get(num);
+                result += k;
+                answer.put(num,k+1);
+            } else{
+                   answer.put(num,1);
+            }    
         }
-        return goodCount;
-        
+        return result;
         
     }
 }
-
-
