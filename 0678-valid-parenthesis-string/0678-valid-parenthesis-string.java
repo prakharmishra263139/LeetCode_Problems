@@ -1,9 +1,7 @@
 class Solution {
     public boolean checkValidString(String s) {
-        
         Stack<Integer> open = new Stack<>();
         Stack<Integer> st = new Stack<>();
-
         for(int i=0;i<s.length();i++){
             char ch = s.charAt(i);
             if(ch=='('){
@@ -20,7 +18,6 @@ class Solution {
                 }
             }
         }
-
         while(!open.isEmpty()){
             if(st.isEmpty()){
                 return false;
@@ -33,7 +30,6 @@ class Solution {
                 return false;
             }
         }
-
         return open.isEmpty();
     }
 }
